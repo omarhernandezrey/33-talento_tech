@@ -14,10 +14,13 @@ function App() {
         <Perfil1
           nombre='Brais Moure'
           pais='España'
-          imagenUrl='https://pbs.twimg.com/media/EhslsVOXcAAqDWm?format=jpg&name=900x900'
+          imagenUrl='https://i.ytimg.com/vi/Kp4Mvapo5kc/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAsJ5M-eHUlV6op62b-Jjszt5RAKg'
           cargo='Ingeniero de Software'
           empresa='MoureDev'
           perfil='Es un Youtuber español, es el fundador de la empresa de desarrollo de software MoureDev'
+          linkedin='https://www.linkedin.com/in/braismoure/'
+          youtube='https://www.youtube.com/@mouredev'
+          x='https://twitter.com/MoureDev'
         />
 
         <Perfil2
@@ -27,6 +30,9 @@ function App() {
           cargo=' Ingeniero de Software'
           empresa='Consultoría de TI y Consultoría empresarial'
           perfil=' Miguel Ángel Durán es Creador de Contenido sobre Programación y Tecnología, Cuenta con una comunidad de más de 700k de seguidores en sus redes sociales. Su canal de programación en Twitch es uno de los más vistos en el mundo'
+          linkedin='https://www.linkedin.com/in/midudev/'
+          youtube='https://www.youtube.com/@midudev'
+          x='https://twitter.com/midudev'
         />
         <Perfil3
           nombre='Víctor Robles WEB'
@@ -35,6 +41,9 @@ function App() {
           cargo='desarrollador we'
           empresa='youtubeempresa'
           perfil='desarrollador web y formador online. En este canal voy a hablar de desarrollo y a enseñarte a crear aplicaciones web'
+          linkedin='https://www.linkedin.com/in/braismoure/'
+          youtube='https://www.youtube.com/@VictorRoblesWEB'
+          x='https://www.linkedin.com/in/victorroblesweb/'
         />
       </div>
     </div>

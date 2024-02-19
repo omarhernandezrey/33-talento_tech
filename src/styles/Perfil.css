@@ -1,20 +1,20 @@
+.contenedor-principal {
+  width: 100%;
+  padding: 0 20px;
+}
+
 .contenedor-perfil {
-  width: 910px;
+  width: calc(100% - 40px); /* Calculamos el ancho restando el doble del margen */
   height: 300px;
   display: flex;
   background-color: papayawhip;
-  margin: 10px 10px 30px;
+  margin: 10px auto 30px; /* Añadimos margen arriba y abajo, y auto para centrar */
   justify-content: center;
-  align-items: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .imagen-perfil {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
+  height: 100%;
+  width: auto;
 }
 
 .contenedor-texto-perfil {
@@ -23,6 +23,8 @@
   font-weight: 400;
   line-height: 1.5rem;
   padding-bottom: 25px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .nombre-perfil {
@@ -38,3 +40,15 @@
   font-size: 1rem;
 }
 
+button {
+  background-color: #45b39d;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}

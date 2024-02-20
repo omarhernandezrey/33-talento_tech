@@ -1,12 +1,14 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-
+import Contador from './components/Contador';
 import Perfil1 from './components/Perfil1';
 import Perfil2 from './components/Perfil2';
 import Perfil3 from './components/Perfil3';
 
 function App() {
+  // Declara un nuevo estado de contador dentro del componente App
+  const [contador, setContador] = useState(0);
+
   return (
     <div className="App">
       <div className='contenedor-principal'>
@@ -45,6 +47,14 @@ function App() {
           youtube='https://www.youtube.com/@VictorRoblesWEB'
           x='https://www.linkedin.com/in/victorroblesweb/'
         />
+        {/* Implementación de un contador */}
+        <p>Has hecho click {contador} veces</p>
+        <button onClick={() => setContador(contador + 1)}>
+          Aumentar
+        </button>
+        <button onClick={() => setContador(contador - 1)}>
+          Disminuir
+        </button>
       </div>
     </div>
   );

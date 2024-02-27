@@ -1,49 +1,35 @@
 import React, { useState, useEffect } from 'react';
-/* import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg' */
 import './App.css';
 
 function App() {
-  const [catImageUrl, setCatImageUrl] = useState('');
-  const [fact, setFact] = useState('');
+  const [cocktails, setCocktails] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchCocktails = async () => {
       try {
-        const response = await fetch('https://catfact.ninja/fact');
+        const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita');
         const data = await response.json();
-        const { fact } = data;
-        setFact(fact);
+        setCocktails(data.drinks);
       } catch (error) {
         console.error(error);
       }
     };
 
-    fetchData();
+    fetchCocktails();
   }, []);
 
-  useEffect(() => {
-    const fetchCatImage = async () => {
-      if (fact) {
-        try {
-          const firstWord = fact.split(' ', 3).join(' ');
-          const catImageUrl = `https://cataas.com/cat/says/${encodeURIComponent(firstWord)}`;
-          setCatImageUrl(catImageUrl);
-        } catch (error) {
-          console.error(error);
-        }
-      }
-    };
-
-    fetchCatImage();
-  }, [fact]);
-
   return (
-    <>
-      <h1>useState, useEffect example: Random cat</h1>
-      {fact && <p>{fact}</p>}
-      {catImageUrl && <img src={catImageUrl} alt='random' width={400} height={400} />}
-    </>
+    <div className="cocktail-container">
+      {cocktails.map(cocktail => (
+        <div key={cocktail.idDrink} className="cocktail-card">
+          <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
+          <div className="cocktail-details">
+            <h2>{cocktail.strDrink}</h2>
+            <p>{cocktail.strInstructions}</p>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }
 

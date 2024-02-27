@@ -1,6 +1,40 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.cocktail-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cocktail-card {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% / 4 - 15px); /* Calcula el ancho de cada tarjeta para mostrar 4 tarjetas en una fila */
+}
+
+.cocktail-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cocktail-details {
+  margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+  .cocktail-card {
+    width: calc(100% / 4 - 20px); /* Muestra 3 tarjetas en una fila en pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .cocktail-card {
+    width: calc(100% / 2 - 20px); /* Muestra 2 tarjetas en una fila en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .cocktail-card {
+    width: calc(100% - 20px); /* Muestra 1 tarjeta en una fila en pantallas muy pequeñas */
+  }
 }
